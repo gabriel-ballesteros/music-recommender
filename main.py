@@ -28,6 +28,14 @@ contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
 
+file_ = open("img/Spotify.png", "rb")
+contents = file_.read()
+spotify_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+
+def make_clickable(link):
+    return f'<a href={link} target="_blank"><img width="50" height="50" border="0" align="center" src="data:image/png;base64,{spotify_url}"/></a>'
+
 st.title('Music Recommender')
 st.image(image,width=400)
 st.write('You can search for songs on Spotify and I will recommend you similar songs based on its features. All you have to do is add songs to the list and click on "Recommend"')
@@ -77,5 +85,8 @@ if query != '':
                 col.append('https://open.spotify.com/track/' + re.search('.+:(.+)', track['uri']).group(1))
                 recommendations_df.loc[len(recommendations_df)] = col
             loading.empty()
-            st.table(recommendations_df)
+            recommendations_df['Link'] = recommendations_df['Link'].apply(make_clickable)
+            recommendations_df = recommendations_df.to_html(escape=False)
+            st.write(recommendations_df, unsafe_allow_html=True)
+            #st.table(recommendations_df)
             
