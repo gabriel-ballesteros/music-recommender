@@ -44,6 +44,14 @@ The general idea is to compare the difference between all the features of the in
 
 Where *p* and *q* are the tracks and the subindexes (*1*, *2*, ..., *i*, ..., *n*) are the features (acousticness, danceability, etc.)
 
+### Similarities
+
+So, once we get the distances we can compare the distance between the inputted track and every other one in the dataset in the following way:
+
+<img src="img/similarity.png" alt="similarity" width="400"/>
+
+And then we just pick the track that has higher similarity to the inputted track (its similarity is closest to 1.0)
+
 ## Next steps
 This is only a prototype to test how well a recommender with euclidean distance works when using the features provided in the Spotify API, but it may be enhanced with the following ideas:
 
