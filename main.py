@@ -156,7 +156,7 @@ elif page == 'About':
     st.markdown('''While Spotify has all our user data and can make really good guesses at what we may like, there isn't a specific search tool because
     they have an approach based on exploration and user history. This application aims to be a recommender based on a tracklist you input and filters you set, like genres,
     year range or artist popularity.''')
-    st.markdown('## How the recommender works')
+    st.markdown('## How does the recommender work?')
     st.markdown('''First, a dataset was created using the first 200 artists from the [Million Song Dataset](http://millionsongdataset.com/) and
     the [Spotify web API](https://developer.spotify.com/documentation/web-api/) (**1**) by getting all the albums from those artists and dumping
     them in the dataset. With the data ready, the user searches in Spotify for tracks and selects up to 10 tracks to use as input (**2**),
@@ -201,6 +201,7 @@ elif page == 'About':
     Spotify API, but it may be enhanced with the following ideas:''')
     st.markdown('''
     - Improve Exploratory Analysis
+    - Add more artists to diversify
     - Feed it with data from the user's [Spotify account activity](https://developer.spotify.com/documentation/web-api/reference/personalization/) instead of an inputted tracklist
     - Store the track information in a database rather than using dataframes to store the tracks
     - Clusterize the tracks with [kmeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) (by genre and the features with most variance)
