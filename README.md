@@ -1,6 +1,8 @@
 # Spotify Music Recommender
 Simple recommendation system using the [Spotify web API](https://developer.spotify.com/documentation/web-api/) to get the features and analysis of tracks; initial track dataset built with [the Million Song Dataset](http://millionsongdataset.com/)
 
+Run it on a terminal with `streamlit run main.py`
+
 ## Why?
 
 While Spotify has all our user data and can make really good guesses at what we may like, there isn't a specific search tool because they have an approach based on exploration and user history. This application aims to be a recommender based on a tracklist you input and filters you set, like genres, year range or artist popularity.
