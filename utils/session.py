@@ -4,8 +4,13 @@ import pandas as pd
 
 # session variables
 track_list = pd.DataFrame(columns = ['Track','Artist','Album','Year','Id'])
-artists_in_list = False
+
+exclude_artists = False
+less_popular_artists = False
+only_in_genres = False
 genres = []
+from_year = 0
+to_year = 2020
 
 # session methods (getters and setters-ish)
 def add_track(track):
