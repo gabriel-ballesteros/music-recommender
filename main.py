@@ -48,7 +48,8 @@ page = st.sidebar.selectbox(
 if page == 'Recommender':
     st.title('Music Recommender')
     st.image(banner,width=400)
-    st.write('You can search for songs on Spotify and I will recommend you similar songs based on its features. All you have to do is add songs to the list and click on "Recommend"')
+    st.write('''You can search for songs on Spotify and I will recommend you similar songs based on its features. All you have to do
+    is look for songs in Spotify, add them to the list, choose among the filters and click on "Recommend"''')
     st.markdown('## Input')
     query = st.text_input('Search for a music track in Spotify')
 
