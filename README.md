@@ -9,6 +9,8 @@ While Spotify has all our user data and can make really good guesses at what we 
 
 ## How does the recommender work?
 
+![demo](img/demo.gif)
+
 First, a dataset was created using the first 200 artists from the [Million Song Dataset](http://millionsongdataset.com/) and the [Spotify web API](https://developer.spotify.com/documentation/web-api/) (**1**) by getting all the albums from those artists and dumping them in the dataset. With the data ready, the user searches in Spotify for tracks and selects up to 10 tracks to use as input (**2**), then the recommender looks in the dataset the track that has most features in common (the "shortest distance" between them) and shows them in a list (**3**).
 
 ![diagram](img/diagram.png)
